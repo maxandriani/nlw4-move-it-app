@@ -1,0 +1,82 @@
+.countdown {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.countdown .clock {
+  display: flex;
+  align-items: center;
+  font-family: Rajdhani;
+  font-weight: 600;
+  color: var(--title);
+  justify-content: space-evenly;
+  gap: 0.1rem;
+}
+
+.countdown .clock > .digit {
+  flex: 1;
+  background: var(--white);
+  box-shadow: 0 0 60px rgba(0, 0, 0, 0.12);
+  border-radius: 0.5rem;
+  font-size: 8.5rem;
+  text-align: center;
+}
+
+.countdown .clock > .digit:nth-of-type(1),
+.countdown .clock > .digit:nth-of-type(4) {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.countdown .clock > .digit:nth-of-type(2),
+.countdown .clock > .digit:nth-of-type(5) {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.countdown .clock > .spacer {
+  font-size: 6.254rem;
+  text-align: center;
+  margin: 0 0.2rem;
+}
+
+.countdown .countdownBtn {
+  width: 100%;
+  height: 5rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 0;
+  outline: none;
+  border-radius: 0.5rem;
+
+  background: var(--blue);
+  color: var(--white);
+  font-size: 1.25rem;
+  font-weight: 600;
+
+  transition: background-color 0.5s;
+}
+
+.countdown .countdownBtn:disabled {
+  background: var(--white);
+  cursor: not-allowed;
+  color: var(--text);
+}
+
+.countdown .countdownBtn.active {
+  background-color: var(--white);
+  color: var(--text);
+}
+
+.countdown .countdownBtn:not(:disabled):hover {
+  background-color: var(--blue-dark);
+}
+
+.countdown .countdownBtn:hover.active {
+  background-color: var(--red);
+  color: var(--white);
+}

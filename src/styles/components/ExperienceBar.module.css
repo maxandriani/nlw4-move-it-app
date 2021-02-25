@@ -1,0 +1,38 @@
+.experienceBar {
+  display: flex;
+  align-items: center;
+}
+
+.experienceBar > .label {
+  font-size: 1rem;
+}
+
+.experienceBar > .bar {
+  flex: 1;
+  height: 4px;
+  border-radius: 4px;
+  margin: 0 1.5rem;
+  position: relative;
+  cursor: pointer;
+}
+
+.experienceBar > .bar .barLineBg {
+  fill: var(--gray-line);
+}
+
+.experienceBar > .bar .barLine {
+  fill: var(--green);
+}
+
+.experienceBar > .currentValue {
+  position: absolute;
+  left: 50%;
+  top: 3.5rem;
+  transform: translateX(-50%);
+  display: none;
+}
+
+.experienceBar:hover > .currentValue {
+  display: block;
+}
+

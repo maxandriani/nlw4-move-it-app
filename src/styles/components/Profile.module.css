@@ -1,0 +1,34 @@
+.profile {
+  display: flex;
+  align-items: center;
+}
+
+.profile > .picture {
+  width: 5.5rem;
+  height: 5.5rem;
+  border-radius: 50%;
+}
+
+.profile > .info {
+  margin-left: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.profile > .info .title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--title);
+  margin: 0;
+  padding: 0;
+}
+
+.profile > .info .description {
+  font-size: 1rem;
+  margin: 0;
+}
+
+.profile > .info .description > .icon {
+  margin-right: 0.5rem;
+}

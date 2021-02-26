@@ -1,5 +1,5 @@
 import { createContext, PropsWithChildren, useContext, useEffect, useState } from "react";
-import { ChallengesContext, IChallengesProviderProps } from "./ChallengesContext";
+import { ChallengesContext } from "./ChallengesContext";
 
 export const DEFAULT_TIME = 25 * 60;
 
@@ -16,7 +16,7 @@ export interface ICountdownProviderProps {}
 
 export const CountdownContext = createContext<ICountdownState>({} as ICountdownState);
 
-export function CountdownProvider({ children }: PropsWithChildren<IChallengesProviderProps>) {
+export function CountdownProvider({ children }: PropsWithChildren<ICountdownProviderProps>) {
   const { startNewChallenge } = useContext(ChallengesContext);
 
   const [time, setTime] = useState(DEFAULT_TIME);
